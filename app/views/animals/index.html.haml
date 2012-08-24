@@ -14,8 +14,8 @@
     %tr
       %td= animal.name
       %td= animal.description
-      %td= animal.species
-      %td= animal.habitat
+      %td= animal.species.name unless animal.species.nil?
+      %td= animal.habitat.name unless animal.habitat.nil?
       %td= animal.photo_file_name
       %td= animal.photo_content_type
       %td= animal.photo_file_size

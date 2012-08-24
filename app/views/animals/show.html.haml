@@ -8,10 +8,10 @@
   = @animal.description
 %p
   %strong Species:
-  = @animal.species
+  = @animal.species.name unless @animal.species.nil?
 %p
   %strong Habitat:
-  = @animal.habitat
+  = @animal.habitat.name unless @animal.habitat.nil?
 %p
   %strong Photo File Name:
   = @animal.photo_file_name
