@@ -1,0 +1,36 @@
+= form_for @animal do |f|
+  = f.error_messages
+  %p
+    = f.label :name
+    %br
+    = f.text_field :name
+  %p
+    = f.label :description
+    %br
+    = f.text_area :description
+  %p
+    = f.label :species
+    %br
+    = f.text_field :species
+  %p
+    = f.label :habitat
+    %br
+    = f.text_field :habitat
+  %p
+    = f.label :photo_file_name
+    %br
+    = f.text_field :photo_file_name
+  %p
+    = f.label :photo_content_type
+    %br
+    = f.text_field :photo_content_type
+  %p
+    = f.label :photo_file_size
+    %br
+    = f.text_field :photo_file_size
+  %p
+    = f.label :photo_updated_at
+    %br
+    = f.text_field :photo_updated_at
+  %p
+    = f.submit

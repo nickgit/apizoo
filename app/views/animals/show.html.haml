@@ -1,0 +1,33 @@
+- title "Animal"
+
+%p
+  %strong Name:
+  = @animal.name
+%p
+  %strong Description:
+  = @animal.description
+%p
+  %strong Species:
+  = @animal.species
+%p
+  %strong Habitat:
+  = @animal.habitat
+%p
+  %strong Photo File Name:
+  = @animal.photo_file_name
+%p
+  %strong Photo Content Type:
+  = @animal.photo_content_type
+%p
+  %strong Photo File Size:
+  = @animal.photo_file_size
+%p
+  %strong Photo Updated At:
+  = @animal.photo_updated_at
+
+%p
+  = link_to "Edit", edit_animal_path(@animal)
+  |
+  = link_to "Destroy", @animal, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", animals_path

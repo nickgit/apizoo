@@ -1,0 +1,23 @@
+- title "Habitats"
+
+%table
+  %tr
+    %th Name
+    %th Description
+    %th Photo file name
+    %th Photo content type
+    %th Photo file size
+    %th Photo updated at
+  - for habitat in @habitats
+    %tr
+      %td= habitat.name
+      %td= habitat.description
+      %td= habitat.photo_file_name
+      %td= habitat.photo_content_type
+      %td= habitat.photo_file_size
+      %td= habitat.photo_updated_at
+      %td= link_to 'Show', habitat
+      %td= link_to 'Edit', edit_habitat_path(habitat)
+      %td= link_to 'Destroy', habitat, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Habitat", new_habitat_path

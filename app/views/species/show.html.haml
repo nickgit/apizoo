@@ -1,0 +1,27 @@
+- title "Species"
+
+%p
+  %strong Name:
+  = @species.name
+%p
+  %strong Description:
+  = @species.description
+%p
+  %strong Photo File Name:
+  = @species.photo_file_name
+%p
+  %strong Photo Content Type:
+  = @species.photo_content_type
+%p
+  %strong Photo File Size:
+  = @species.photo_file_size
+%p
+  %strong Photo Updated At:
+  = @species.photo_updated_at
+
+%p
+  = link_to "Edit", edit_species_path(@species)
+  |
+  = link_to "Destroy", @species, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", species_path

@@ -1,0 +1,23 @@
+- title "Species"
+
+%table
+  %tr
+    %th Name
+    %th Description
+    %th Photo file name
+    %th Photo content type
+    %th Photo file size
+    %th Photo updated at
+  - for species in @species
+    %tr
+      %td= species.name
+      %td= species.description
+      %td= species.photo_file_name
+      %td= species.photo_content_type
+      %td= species.photo_file_size
+      %td= species.photo_updated_at
+      %td= link_to 'Show', species
+      %td= link_to 'Edit', edit_species_path(species)
+      %td= link_to 'Destroy', species, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Species", new_species_path

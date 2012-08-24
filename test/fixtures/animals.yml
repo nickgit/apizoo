@@ -1,0 +1,19 @@
+one:
+  name: MyString
+  description: MyText
+  species: 
+  habitat: 
+  photo_file_name: MyString
+  photo_content_type: MyString
+  photo_file_size: MyString
+  photo_updated_at: MyString
+
+two:
+  name: MyString
+  description: MyText
+  species: 
+  habitat: 
+  photo_file_name: MyString
+  photo_content_type: MyString
+  photo_file_size: MyString
+  photo_updated_at: MyString
