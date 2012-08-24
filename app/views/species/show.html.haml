@@ -7,10 +7,10 @@
   %strong Description:
   = @species.description
 %p
-  = image_tag @species.photo.url(:medium)
+  = image_tag @species.photo.url(:thumb)
 %p
   = link_to "Edit", edit_species_path(@species)
   |
   = link_to "Destroy", @species, :confirm => 'Are you sure?', :method => :delete
   |
-  = link_to "View All", species_path
+  = link_to "View All", species_index_path

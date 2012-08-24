@@ -1,4 +1,4 @@
-= form_for @species, :url => species_index_path, :html => { :multipart => true } do |f|
+= form_for @species, :html => { :multipart => true } do |f|
   = f.error_messages
   %p
     = f.label :name
@@ -8,6 +8,8 @@
     = f.label :description
     %br
     = f.text_area :description
+  %p
+    = image_tag @species.photo.url(:medium) if @species.photo.exists?
   %p
     = f.file_field :photo
   %p

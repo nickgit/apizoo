@@ -36,6 +36,6 @@ class SpeciesController < ApplicationController
   def destroy
     @species = Species.find(params[:id])
     @species.destroy
-    redirect_to species_url, :notice => "Successfully destroyed species."
+    redirect_to species_index_url, :notice => "Successfully destroyed species."
   end
 end
