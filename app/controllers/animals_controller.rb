@@ -1,10 +1,18 @@
 class AnimalsController < ApplicationController
   def index
     @animals = Animal.all
+    respond_to do |format|
+      format.html
+      format.json { render :json => @animals}    
+    end
   end
 
   def show
     @animal = Animal.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.json { render :json => @animal}    
+    end
   end
 
   def new
@@ -12,7 +20,8 @@ class AnimalsController < ApplicationController
   end
 
   def create
-    @animal = Animal.new(params[:animal])
+    @species = Species.find(params[:animal][:species_id])
+    @animal = @species.animals.build(params[:animal])
     if @animal.save
       redirect_to @animal, :notice => "Successfully created animal."
     else

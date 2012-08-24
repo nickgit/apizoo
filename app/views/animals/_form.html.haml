@@ -9,13 +9,9 @@
     %br
     = f.text_area :description
   %p
-    = f.label :species
-    %br
-    = f.text_field :species
+    = select('animal', 'species_id', Species.all.collect {|s| [ s.name, s.id ] })
   %p
-    = f.label :habitat
-    %br
-    = f.text_field :habitat
+    = select('animal', 'habitat_id', Habitat.all.collect {|h| [ h.name, h.id ] })
   %p
     = f.label :photo_file_name
     %br
